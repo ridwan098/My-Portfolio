@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC !-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>  
+    <meta charset="UTF-8">
+	<meta name="description" content="My Portfolio">
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript, Portfolio">
+	<meta name="author" content="Ridwan Ishola">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href = "index.css">
+    <title>Log In Form</title>
+    <link rel = "shortcut icon" href = "Other Images/image_favicon.png"/>
+  </head>
+  <body>
+    <div class = "loginBox">
+      <img src = "Other Images/SignIn_Avatar.svg" class = "user">
+      <h2>Log In Here</h2>
+      <form name = "LogInForm">
+        <p>Username</p>
+        <input type="text" name="userid" placeholder="Enter Username" required>
+        <p>Password</p>
+        <input type="password" name="password" placeholder="•••••••••" required>
+        <input type="submit" name="Sign In" onclick="check(this.form)">
+        <a href = "Other Images/Forgotten Password.html">Forget Password</a>
+      </form>
+    </div>
+
+    
+    <a href = "Other Images/Assignment 3.docx"><button>Document For Task 1</button></a>
+  	
+  </body>
+  <script type = "text/javascript">
+		function check(form)
+		{
+
+		if(document.LogInForm.userid.value == "" && document.LogInForm.password.value == "")
+		{
+			if (confirm("Log In credentials correct")) {
+				 location.href = "Other Images/Portfolio/My Portfolio.html"
+			}			
+			
+			return true;
+		}
+		else
+		{
+			alert("Incorrect Password or Username")
+			return false;
+		}
+		}
+	</script>
+</html> 
+
+
